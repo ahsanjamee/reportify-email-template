@@ -6,10 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="http://fonts.cdnfonts.com/css/sofia-pro" rel="stylesheet" />
     <style>
-      @media screen and (max-width: 768px) {
-        body {
-          left: 0% !important;
-          transform: translateX(0%) !important;
+      @media (min-width: 768px) {
+        table {
+          width: 680px !important;
+          max-width: 680px !important;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .text-wrap {
+          padding: 0 10px !important;
+        }
+        .text-gap {
+          left: 30% !important;
+        }
+        .bg-styles {
+          width: 100% !important;
+          /* padding: 0 10px !important; */
         }
       }
     </style>
@@ -19,290 +32,379 @@
       background-color: #e5e5e5;
       font-family: 'Sofia Pro, sans-serif';
       margin: 0;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
     "
   >
-    <div class="container" style="width: 680px; background-color: #fff">
-      <div class="logo-wrap" style="text-align: center; padding: 50px 0">
-        <img
-          class="logo"
-          src="https://d2bk15luuua1wq.cloudfront.net/mail_assets/logo.svg"
-          alt="logo"
-          class="logo"
-        />
-      </div>
-      <div class="bg-wrap top-bg" style="text-align: center">
-        <img
-          class="bg-styles"
-          src="https://d2bk15luuua1wq.cloudfront.net/mail_assets/top-bg.svg"
-          alt="top"
-          class="logo"
-        />
-      </div>
-      <div class="text-wrap" style="padding: 0 70px">
-        <div
-          class="divider"
-          style="width: 100%; border-top: 3px solid #dee4ed; margin: 60px 0"
-        ></div>
-        <h1
-          style="
-            font-weight: 800;
-            font-size: 26px;
-            line-height: 30px;
-            padding-bottom: 30px;
-          "
-        >
-          Din 14-dagers prøveperiode starter nå!
-        </h1>
-
-        <!-- Add customer name here -->
-
-        <div class="name" style="font-size: 18px; font-weight: 700">
-          Hei Customer Name,
-        </div>
-        <p
-          class="text"
-          style="font-size: 16px; font-weight: 400; line-height: 28px"
-        >
-          Din gratis prøveperiode starter i dag. Vi er glade for å ha deg med
-          oss og gleder oss til å hjelpe deg med å komme i gang på reisen din
-          med Reportify.
-        </p>
-        <p
-          class="text"
-          style="font-size: 16px; font-weight: 400; line-height: 28px"
-        >
-          <b>Reportify</b> er en plattform der du kan legge til bedrifter,
-          sjekke regnskapet deres, legge til widgeter i kontrollpanelet for å
-          spore forskjellige KPI og analyser, dele og tilpasse kontrollpanelet.
-          Du kan konsolidere bedriftens regnskaper, gruppere dem etter behov.
-          Automatisk synkronisering går daglig av økonomiske data, slik at du
-          ikke går glipp av noen av de viktigste økonomiske transaksjonene. Del
-          med andre kolleger og sette opp riktig tillatelser. Våre kunder sier
-          at Reportify hjelper teamene deres med å administrere regnskaper på
-          ett enkelt sted og overvåke KPI-er bedre. Vi ønsker å hjelpe deg eller
-          din bedrift med å gjøre det samme.
-        </p>
-      </div>
-      <div class="bg-wrap mid-bg" style="text-align: center">
-        <img
-          class="bg-styles"
-          src="https://d2bk15luuua1wq.cloudfront.net/mail_assets/dashboard.svg"
-          alt="dashboard"
-        />
-      </div>
-      <div class="text-wrap" style="padding: 0 70px">
-        <p
-          class="text"
-          style="font-size: 16px; font-weight: 400; line-height: 28px"
-        >
-          <b>I løpet av de neste 14 dagene,</b> vil du ha en sjanse til å teste
-          Reportifys mange funksjoner. Sett opp dine egne bedrifter og dele det
-          med dine team. Lek rundt med widgetene for å utforske hva mer du kan
-          gjøre! Vi sender også tips for å hjelpe deg og teamene dine med å få
-          mest mulig ut av Reportify.
-        </p>
-      </div>
-      <div class="text-wrap text-top" style="padding: 0 70px">
-        <h3>Vil du lære mer?</h3>
-        <p
-          class="text"
-          style="font-size: 16px; font-weight: 400; line-height: 28px"
-        >
-          For å få en trinnvis veiledning og for å lære mer om Tixio, sjekk ut
-          vår Komme i gang-side. For mer informasjon, kontakt oss direkte via
-          live-chat nederst til høyre i appen.
-        </p>
-      </div>
-      <div class="text-wrap text-top" style="padding: 0 70px">
-        <h3>Oppgrader til Pro?</h3>
-        <p
-          class="text"
-          style="font-size: 16px; font-weight: 400; line-height: 28px"
-        >
-          Få full tilgang til Pro og unngå problemer med test versjonen, få
-          prioritert kundestøtte og alt Reportify har å tilby.
-        </p>
-      </div>
-      <div class="text-wrap text-top" style="padding: 0 70px">
-        <a
-          class="try-button"
-          href="https://reportify.no"
-          target="_blank"
-          style="
-            font-weight: normal;
-            font-size: 18px;
-            line-height: 18px;
-            color: #ffffff;
-            background: #f76552;
-            border-radius: 6px;
-            height: 54px;
-            display: block;
-            position: relative;
-            margin-top: 50px;
-          "
-        >
-          <span
+    <table
+      style="
+        border-collapse: collapse;
+        table-layout: fixed;
+        border-spacing: 0;
+        vertical-align: top;
+        min-width: 320px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        width: 100%;
+      "
+      cellpadding="0"
+      cellspacing="0"
+    >
+      <tbody>
+        <tr>
+          <td
             style="
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
+              word-break: break-word;
+              border-collapse: collapse !important;
+              vertical-align: top;
             "
           >
-            Prøv det Gratis
-          </span></a
-        >
-      </div>
-      <div
-        class="lite-text support-text"
-        style="text-align: center; margin-top: 10px"
-      >
-        Har du flere spørsmål? Kontakt oss via
-        <a
-          class="primary-text support-link"
-          style="margin-left: 7px; color: #f76552; text-decoration: none"
-          href="mailto:support@reportify.no"
-        >
-          support@reportify.no</a
-        >
-      </div>
+            <div class="container" style="background-color: #fff">
+              <div
+                class="logo-wrap"
+                style="text-align: center; padding: 50px 0"
+              >
+                <img
+                  class="logo"
+                  src="https://d2bk15luuua1wq.cloudfront.net/mail_assets/logo.svg"
+                  alt="logo"
+                  class="logo"
+                />
+              </div>
+              <div class="bg-wrap top-bg" style="text-align: center">
+                <img
+                  class="bg-styles"
+                  src="https://d2bk15luuua1wq.cloudfront.net/mail_assets/top-bg.svg"
+                  alt="top"
+                  class="logo"
+                />
+              </div>
+              <div class="text-wrap" style="padding: 0 70px">
+                <div
+                  class="divider"
+                  style="
+                    width: 100%;
+                    border-top: 3px solid #dee4ed;
+                    margin: 60px 0;
+                  "
+                ></div>
+                <h1
+                  style="
+                    font-weight: 800;
+                    font-size: 26px;
+                    line-height: 30px;
+                    padding-bottom: 30px;
+                  "
+                >
+                  Din 14-dagers prøveperiode starter nå!
+                </h1>
 
-      <!-- bottom portion starts -->
+                <!-- Add customer name here -->
 
-      <div class="text-wrap" style="padding: 0 70px">
-        <div
-          class="divider"
-          style="width: 100%; border-top: 3px solid #dee4ed; margin: 60px 0"
-        ></div>
-      </div>
-      <div class="text-wrap" style="padding: 0 70px">
-        <div class="navs" style="text-align: center">
-          <a
-            href="https://reportify.no/"
-            target="_blank"
-            style="text-decoration: none"
-            >Om oss</a
-          >
-          <a
-            href="https://reportify.no/"
-            target="_blank"
-            style="text-decoration: none; margin-left: 15px"
-            >Pris</a
-          >
-          <a
-            href="https://reportify.no/"
-            target="_blank"
-            style="text-decoration: none; margin-left: 15px"
-            >Ofte Stilte Spørsmål</a
-          >
-          <a
-            href="https://reportify.no/"
-            target="_blank"
-            style="text-decoration: none; margin-left: 15px"
-            >Personvernerklæring</a
-          >
-        </div>
-      </div>
-      <div
-        class="social-icons-wrap"
-        style="
-          margin-top: 30px;
-          padding: 0 70px;
-          text-align: center;
-          position: relative;
-        "
-      >
-        <div
-          class="lite-text text-gap"
-          style="
-            display: inline-block;
-            padding-right: 10px;
-            font-size: 12px;
-            color: #767e9d;
-            position: absolute;
-            left: 40%;
-            top: 15%;
-          "
-        >
-          Følg oss
-        </div>
-        <a
-          class="social-icon"
-          style="
-            width: 20px;
-            height: 20px;
-            margin-left: 60px;
-            text-decoration: none;
-          "
-          href="https://www.facebook.com/ReportifyApp"
-        >
-          <img
-            src="https://i.ibb.co/w7Xcj6F/facebook.jpg"
-            alt="facebook"
-            border="0"
-          />
-        </a>
-        <a
-          class="social-icon"
-          style="
-            width: 20px;
-            height: 20px;
-            margin-left: 10px;
-            text-decoration: none;
-          "
-          href="https://www.facebook.com/ReportifyApp"
-        >
-          <img
-            src="https://i.ibb.co/9yYfGvp/linkedin.jpg"
-            alt="linkedin"
-            border="0"
-          />
-        </a>
-        <a
-          class="social-icon"
-          style="
-            width: 20px;
-            height: 20px;
-            margin-left: 10px;
-            text-decoration: none;
-          "
-          href="https://www.facebook.com/ReportifyApp"
-        >
-          <img
-            src="https://i.ibb.co/ctYrDkq/twitter.jpg"
-            alt="twitter"
-            border="0"
-          />
-        </a>
-      </div>
-      <div
-        class="bottom-texts lite-text"
-        style="
-          padding: 30px 70px 50px 70px;
-          color: #767e9d;
-          text-align: center;
-          line-height: 24px;
-        "
-      >
-        <div class="text">Reportify er en tjeneste levert av Getonnet AS.</div>
-        <div>
-          <a
-            class="primary-text with-border"
-            href="https://getonnet.no/"
-            style="text-decoration: none; color: #f76552"
-            >www.getonnet.no</a
-          >
-          Orgnr: 998580706
-        </div>
-        <div class="text">© 2020, Made by Getonnet.</div>
-        <div class="text">
-          Hvis du vil, kan du melde deg av nyhetsbrev-listen vår.
-        </div>
-      </div>
-    </div>
+                <div class="name" style="font-size: 18px; font-weight: 700">
+                  Hei Customer Name,
+                </div>
+                <p
+                  class="text"
+                  style="font-size: 16px; font-weight: 400; line-height: 28px"
+                >
+                  Din gratis prøveperiode starter i dag. Vi er glade for å ha
+                  deg med oss og gleder oss til å hjelpe deg med å komme i gang
+                  på reisen din med Reportify.
+                </p>
+                <p
+                  class="text"
+                  style="font-size: 16px; font-weight: 400; line-height: 28px"
+                >
+                  <b>Reportify</b> er en plattform der du kan legge til
+                  bedrifter, sjekke regnskapet deres, legge til widgeter i
+                  kontrollpanelet for å spore forskjellige KPI og analyser, dele
+                  og tilpasse kontrollpanelet. Du kan konsolidere bedriftens
+                  regnskaper, gruppere dem etter behov. Automatisk
+                  synkronisering går daglig av økonomiske data, slik at du ikke
+                  går glipp av noen av de viktigste økonomiske transaksjonene.
+                  Del med andre kolleger og sette opp riktig tillatelser. Våre
+                  kunder sier at Reportify hjelper teamene deres med å
+                  administrere regnskaper på ett enkelt sted og overvåke KPI-er
+                  bedre. Vi ønsker å hjelpe deg eller din bedrift med å gjøre
+                  det samme.
+                </p>
+              </div>
+              <div class="bg-wrap mid-bg" style="text-align: center">
+                <img
+                  class="bg-styles"
+                  src="https://d2bk15luuua1wq.cloudfront.net/mail_assets/dashboard.svg"
+                  alt="dashboard"
+                />
+              </div>
+              <div class="text-wrap" style="padding: 0 70px">
+                <p
+                  class="text"
+                  style="font-size: 16px; font-weight: 400; line-height: 28px"
+                >
+                  <b>I løpet av de neste 14 dagene,</b> vil du ha en sjanse til
+                  å teste Reportifys mange funksjoner. Sett opp dine egne
+                  bedrifter og dele det med dine team. Lek rundt med widgetene
+                  for å utforske hva mer du kan gjøre! Vi sender også tips for å
+                  hjelpe deg og teamene dine med å få mest mulig ut av
+                  Reportify.
+                </p>
+              </div>
+              <div class="text-wrap text-top" style="padding: 0 70px">
+                <h3>Vil du lære mer?</h3>
+                <p
+                  class="text"
+                  style="font-size: 16px; font-weight: 400; line-height: 28px"
+                >
+                  For å få en trinnvis veiledning og for å lære mer om Tixio,
+                  sjekk ut vår Komme i gang-side. For mer informasjon, kontakt
+                  oss direkte via live-chat nederst til høyre i appen.
+                </p>
+              </div>
+              <div class="text-wrap text-top" style="padding: 0 70px">
+                <h3>Oppgrader til Pro?</h3>
+                <p
+                  class="text"
+                  style="font-size: 16px; font-weight: 400; line-height: 28px"
+                >
+                  Få full tilgang til Pro og unngå problemer med test versjonen,
+                  få prioritert kundestøtte og alt Reportify har å tilby.
+                </p>
+              </div>
+              <!-- <div class="text-wrap text-top" style="padding: 0 70px">
+                <a
+                  class="try-button"
+                  href="https://reportify.no"
+                  target="_blank"
+                  style="
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 18px;
+                    color: #ffffff;
+                    background: #f76552;
+                    border-radius: 6px;
+                    height: 54px;
+                    display: block;
+                    position: relative;
+                    margin-top: 50px;
+                  "
+                >
+                  <span
+                    style="
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                    "
+                  >
+                    Prøv det Gratis
+                  </span></a
+                >
+              </div> -->
+
+              <div
+                class="v-container-padding-padding"
+                style="
+                  overflow-wrap: break-word;
+                  word-break: break-word;
+                  padding: 40px 70px 0px;
+                  font-family: 'Open Sans', sans-serif;
+                "
+                align="left"
+              >
+                <div class="v-text-align" align="center">
+                  <a
+                    href="https://reportify.no"
+                    target="_blank"
+                    style="
+                      box-sizing: border-box;
+                      display: inline-block;
+                      font-family: 'Open Sans', sans-serif;
+                      text-decoration: none;
+                      -webkit-text-size-adjust: none;
+                      text-align: center;
+                      color: #ffffff;
+                      background-color: #f76552;
+                      border-radius: 7px;
+                      -webkit-border-radius: 7px;
+                      -moz-border-radius: 7px;
+                      width: 100%;
+                      max-width: 100%;
+                      overflow-wrap: break-word;
+                      word-break: break-word;
+                      word-wrap: break-word;
+                    "
+                  >
+                    <span
+                      style="
+                        display: block;
+                        padding: 15px 20px;
+                        line-height: 120%;
+                      "
+                      >Prøv det Gratis</span
+                    >
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="lite-text support-text"
+                style="text-align: center; margin-top: 10px"
+              >
+                Har du flere spørsmål? Kontakt oss via
+                <a
+                  class="primary-text support-link"
+                  style="
+                    margin-left: 7px;
+                    color: #f76552;
+                    text-decoration: none;
+                  "
+                  href="mailto:support@reportify.no"
+                >
+                  support@reportify.no</a
+                >
+              </div>
+
+              <!-- bottom portion starts -->
+
+              <div class="text-wrap" style="padding: 0 70px">
+                <div
+                  class="divider"
+                  style="
+                    width: 100%;
+                    border-top: 3px solid #dee4ed;
+                    margin: 60px 0;
+                  "
+                ></div>
+              </div>
+              <div class="text-wrap" style="padding: 0 70px">
+                <div class="navs" style="text-align: center">
+                  <a
+                    href="https://reportify.no/"
+                    target="_blank"
+                    style="text-decoration: none"
+                    >Om oss</a
+                  >
+                  <a
+                    href="https://reportify.no/"
+                    target="_blank"
+                    style="text-decoration: none; margin-left: 15px"
+                    >Pris</a
+                  >
+                  <a
+                    href="https://reportify.no/"
+                    target="_blank"
+                    style="text-decoration: none; margin-left: 15px"
+                    >Ofte Stilte Spørsmål</a
+                  >
+                  <a
+                    href="https://reportify.no/"
+                    target="_blank"
+                    style="text-decoration: none; margin-left: 15px"
+                    >Personvernerklæring</a
+                  >
+                </div>
+              </div>
+              <div
+                class="social-icons-wrap"
+                style="
+                  margin-top: 30px;
+                  padding: 0 70px;
+                  text-align: center;
+                  position: relative;
+                "
+              >
+                <div
+                  class="lite-text text-gap"
+                  style="
+                    display: inline-block;
+                    padding-right: 10px;
+                    font-size: 12px;
+                    color: #767e9d;
+                    position: absolute;
+                    left: 40%;
+                    top: 15%;
+                  "
+                >
+                  Følg oss
+                </div>
+                <a
+                  class="social-icon"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    margin-left: 60px;
+                    text-decoration: none;
+                  "
+                  href="https://www.facebook.com/ReportifyApp"
+                >
+                  <img
+                    src="https://i.ibb.co/w7Xcj6F/facebook.jpg"
+                    alt="facebook"
+                    border="0"
+                  />
+                </a>
+                <a
+                  class="social-icon"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    margin-left: 10px;
+                    text-decoration: none;
+                  "
+                  href="https://www.facebook.com/ReportifyApp"
+                >
+                  <img
+                    src="https://i.ibb.co/9yYfGvp/linkedin.jpg"
+                    alt="linkedin"
+                    border="0"
+                  />
+                </a>
+                <a
+                  class="social-icon"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    margin-left: 10px;
+                    text-decoration: none;
+                  "
+                  href="https://www.facebook.com/ReportifyApp"
+                >
+                  <img
+                    src="https://i.ibb.co/ctYrDkq/twitter.jpg"
+                    alt="twitter"
+                    border="0"
+                  />
+                </a>
+              </div>
+              <div
+                class="bottom-texts lite-text"
+                style="
+                  padding: 30px 70px 50px 70px;
+                  color: #767e9d;
+                  text-align: center;
+                  line-height: 24px;
+                "
+              >
+                <div class="text">
+                  Reportify er en tjeneste levert av Getonnet AS.
+                </div>
+                <div>
+                  <a
+                    class="primary-text with-border"
+                    href="https://getonnet.no/"
+                    style="text-decoration: none; color: #f76552"
+                    >www.getonnet.no</a
+                  >
+                  Orgnr: 998580706
+                </div>
+                <div class="text">© 2020, Made by Getonnet.</div>
+                <div class="text">
+                  Hvis du vil, kan du melde deg av nyhetsbrev-listen vår.
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </body>
 </html>
